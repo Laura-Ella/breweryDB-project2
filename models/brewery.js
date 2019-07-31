@@ -2,7 +2,7 @@ const mongoose = require("../db/connection")
 const Schema = mongoose.Schema
 
 const Brewery = new Schema({ 
-    name: String,
+    data: String,
     location: {
         street: String,
         city: String,
