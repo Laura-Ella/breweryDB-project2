@@ -1,15 +1,16 @@
-const dataBeers = require('./dataBeers.json')
-const dataBreweries = require('./dataBreweries.json')
-const dataLocations = require('./dataLocations.json')
+const beers = require('./dataBeers.json')
+const breweries = require('./dataBreweries.json')
+const locations = require('./dataLocations.json')
 
-console.log(people)
+console.log(locations)
 
-const Person = require('./models/Person')
-const Show = require('./models/Show')
-const Show = require('./models/Show')
+const Beer = require('./models/beer')
+const Brewery = require('./models/brewery')
+const Location = require('./models/location')
 
 
-Person.deleteMany({}).then(Person.create(people))
-Show.deleteMany({}).then(Show.create(shows))
+Beer.deleteMany({}).then(Beer.create(beers))
+Brewery.deleteMany({}).then(Brewery.create(breweries))
+Location.deleteMany({}).then(Location.create(locations))
 
 
