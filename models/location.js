@@ -7,4 +7,4 @@ const Location = new Schema({
     state: String
 })
 
-module.exports = mongoose.models("Location", Location)
+module.exports = mongoose.model("Location", Location)

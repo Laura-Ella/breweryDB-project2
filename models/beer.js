@@ -8,4 +8,4 @@ const Beer = new Schema({
     description: String
 })
 
-module.exports = mongoose.models("Beer", Beer)
+module.exports = mongoose.model("Beer", Beer)
