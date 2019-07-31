@@ -6,9 +6,7 @@ const Location = new Schema({
     locality: String,
     region: String,
     postalCode: String,
-    countryIsoCode: String,
-    brewery: {
-    }
+    countryIsoCode: String
 })
 
 module.exports = mongoose.model("Location", Location)
