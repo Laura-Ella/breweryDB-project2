@@ -7,3 +7,5 @@ const Show = require('./models/Show')
 
 Person.deleteMany({}).then(Person.create(people))
 Show.deleteMany({}).then(Show.create(shows))
+
+

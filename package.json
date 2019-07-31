@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Laura-Ella/breweryDB-project2#readme",
   "dependencies": {
     "axios": "^0.19.0",
+    "brewerydb-node": "0.0.1",
     "express": "^4.17.1",
     "lodash": "^4.17.15",
     "mongoose": "^5.6.7"
