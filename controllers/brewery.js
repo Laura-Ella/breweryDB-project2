@@ -13,12 +13,12 @@ module.exports = {
         res.json(brewery)
       )
   },
-  showName: function (req, res) {
-    Brewery.find({ name: req.params.name })
-      .then(brewery =>
-        res.json(brewery)
-      )
-  },
+  // showName: function (req, res) {
+  //   Brewery.find({ name: req.params.name })
+  //     .then(brewery =>
+  //       res.json(brewery)
+  //     )
+  // },
   create: function (req, res) {
     Brewery.create(req.body)
       .then(brewery =>
