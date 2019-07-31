@@ -10,3 +10,5 @@ const Brewery = new Schema({
     },
     type: String
 })
+
+module.exports = mongoose.models("Brewery", Brewery)

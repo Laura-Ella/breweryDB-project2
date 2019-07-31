@@ -7,3 +7,5 @@ const Beer = new Schema({
     ibu: Number,
     description: String
 })
+
+module.exports = mongoose.models("Beer", Beer)
