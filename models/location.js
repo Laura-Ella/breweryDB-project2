@@ -8,7 +8,6 @@ const Location = new Schema({
     postalCode: String,
     countryIsoCode: String,
     brewery: {
-        type: String
     }
 })
 
