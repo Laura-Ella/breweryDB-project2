@@ -2,13 +2,14 @@ const mongoose = require("../db/connection")
 const Schema = mongoose.Schema
 
 const Brewery = new Schema({ 
-    data: String,
+    name: String,
+    nameShortDisplay: String,
+    description: String,
+    website: String,
     location: {
-        street: String,
-        city: String,
-        State: String,
+        type: Schema.Types.ObjectId,
+        ref: "Location"
     },
-    type: String
 })
 
 module.exports = mongoose.model("Brewery", Brewery)
