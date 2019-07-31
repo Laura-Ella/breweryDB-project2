@@ -1,0 +1,10 @@
+const express = require('express')
+const router = express.Router()
+const beerController = require('../controllers/beer')
+
+router.get('/', beerController.index)
+router.get('/', beerController.show)
+router.get('/', beerController.index)
+router.post('/', beerController.create)
+router.put('/', beerController.edit)
+router.delete('/', beerController.delete)
