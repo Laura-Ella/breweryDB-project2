@@ -1,0 +1,10 @@
+const express = require('express')
+const router = express.Router()
+const locationController = require('../controllers/beer')
+
+router.get('/', locationController.index)
+router.get('/', locationController.show)
+router.get('/', locationController.index)
+router.post('/', locationController.create)
+router.put('/', locationController.edit)
+router.delete('/', locationController.delete)
