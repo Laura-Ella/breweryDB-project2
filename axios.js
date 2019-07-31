@@ -18,21 +18,3 @@ axios
    }
  });
 });
-
-
-
-
-// const axios = require('axios')
-// const fs = require('fs')
-
-// const url = "https://sandbox-api.brewerydb.com/v2/beers/?key=ba145591297f768757f299a230a7773a"
-// let json
-// axios.get(url)
-//     .then(response => { json = response.data })
-//     .then(x => console.log(json))
-//     .then()
-
-// axios
-//   .get('https://api.coindesk.com/v1/bpi/currentprice')
-//   .then(response => (this.info = response.data.bpi))
-
