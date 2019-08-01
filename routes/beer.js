@@ -8,4 +8,4 @@ router.post('/', beerController.create)
 router.put('/:id', beerController.edit)
 router.delete('/:id', beerController.delete)
 
-module.export = router
+module.exports = router

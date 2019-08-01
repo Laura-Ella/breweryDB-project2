@@ -4,9 +4,9 @@ const app = express()
 
 app.use(parser.json())
 
-app.get("/", (req, res) => {
-    res.send("Hello World");
-});
+// app.get("/", (req, res) => {
+//     res.send("Hello World");
+// });
 
 app.use("/beer", require("./routes/beer"))
 app.use("/brewery", require("./routes/brewery"))

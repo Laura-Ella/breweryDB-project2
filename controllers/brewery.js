@@ -8,7 +8,7 @@ module.exports = {
       )
   },
   show: function (req, res) {
-    Brewery.find({ id: req.params.id })
+    Brewery.find({ "name": req.params.name })
       .then(brewery =>
         res.json(brewery)
       )
