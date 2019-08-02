@@ -1,6 +1,6 @@
 # Brewery API
 
-Brewery API lists breweries and their locations, and the beers that are available at each brewery. 
+Brewery API lists breweries and their locations, and the beers that are available at each brewery. This API was built with Express, MongoDB and Node.js
 
 ## Installation
 

@@ -1,4 +1,4 @@
-const Beer = require("../models/Beer")
+const Beer = require("../models/beer")
 
 module.exports = {
   index: function (req, res) {

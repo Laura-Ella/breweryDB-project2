@@ -1,4 +1,4 @@
-const Brewery = require("../models/Brewery")
+const Brewery = require("../models/brewery")
 
 module.exports = {
   index: function (req, res) {

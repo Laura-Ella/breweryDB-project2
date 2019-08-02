@@ -10,6 +10,10 @@ const Beer = require('../models/beer')
 const Brewery = require('../models/brewery')
 const Location = require('../models/location')
 
+Beer.deleteMany({}).then(b => Beer.create(beers.data));
+Brewery.deleteMany({}).then(b => Brewery.create(breweries.data));
+Location.deleteMany({}).then(b => Location.create(locations.data))
+
 // locations.data.forEach(location => {
 //     console.log(locations.data)
 // }),
@@ -30,9 +34,7 @@ const Location = require('../models/location')
 // }
 
 
-Beer.deleteMany({}).then(b => Beer.create(beers.data));
-Brewery.deleteMany({}).then(b => Brewery.create(breweries.data));
-Location.deleteMany({}).then(b => Location.create(locations.data))
+
 
 // breweries.data.forEach(location => {
 //     locations.data.forEach(locationTwo => {

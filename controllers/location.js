@@ -1,4 +1,4 @@
-const Location = require("../models/Location")
+const Location = require("../models/location")
 
 module.exports = {
   index: function (req, res) {
