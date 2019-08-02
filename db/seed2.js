@@ -1,6 +1,11 @@
-// const mongoose = require("../db/connection")
-// const Brewery = require("../models/Brewery")
-// const Location = require("../models/Location")
+const mongoose = require("../db/connection")
+const Brewery = require("../models/brewery")
+const Location = require("../models/location")
+const Beer = require("..models/beer")
+
+Beer.deleteMany({}).then(b => Beer.create(beers.data));
+Brewery.deleteMany({}).then(b => Brewery.create(breweries.data));
+Location.deleteMany({}).then(b => Location.create(locations.data))
 
 // // Brewery.find({}).then(brewery => brewery.forEach(brewery =>
 // //     breweryData.filter( breweryData =>{
