@@ -1,7 +1,7 @@
 const mongoose = require("../db/connection")
 const Brewery = require("../models/brewery")
 const Location = require("../models/location")
-const Beer = require("..models/beer")
+const Beer = require("../models/beer")
 
 Beer.deleteMany({}).then(b => Beer.create(beers.data));
 Brewery.deleteMany({}).then(b => Brewery.create(breweries.data));
