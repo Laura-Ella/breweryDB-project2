@@ -11,8 +11,8 @@ const Brewery = require('../models/brewery')
 const Location = require('../models/location')
 
 // locations.data.forEach(location => {
-//     console.log(breweries.data)
-// },
+//     console.log(locations.data)
+// }),
 // if(locations.data.brewery.id === breweries.data.id) {
 //     console.log("hey")
 // }
@@ -30,6 +30,15 @@ const Location = require('../models/location')
 // }
 
 
-Beer.deleteMany({}).then(b => Beer.create(beers.data));
-Brewery.deleteMany({}).then(b => Brewery.create(breweries.data));
-Location.deleteMany({}).then(b => Location.create(locations.data))
+// Beer.deleteMany({}).then(b => Beer.create(beers.data));
+// Brewery.deleteMany({}).then(b => Brewery.create(breweries.data));
+// Location.deleteMany({}).then(b => Location.create(locations.data))
+
+breweries.data.forEach(location => {
+    locations.data.forEach(locationTwo => {
+        if(locations.name === locationTwo.name) {
+            console.log(location.name, locationTwo.name)
+            
+        }
+    })
+})
