@@ -8,9 +8,9 @@ app.use("/beer", require("./routes/beer"));
 app.use("/brewery", require("./routes/brewery"));
 app.use("/location", require("./routes/location"));
 
-app.listen(4000, () => {
-    console.log("listening on 4000")
-});
+// app.listen(4000, () => {
+//     console.log("listening on 4000")
+// });
 
 app.set("port", process.env.PORT || 8080);
 
