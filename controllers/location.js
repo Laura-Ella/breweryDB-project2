@@ -13,12 +13,6 @@ module.exports = {
         res.json(location)
       )
   },
-  // showName: function (req, res) {
-  //   Location.find({ name: req.params.name })
-  //     .then(location =>
-  //       res.json(location)
-  //     )
-  // },
   create: function (req, res) {
     Location.create(req.body)
       .then(location =>

@@ -3,33 +3,24 @@ const Brewery = require("../models/brewery")
 const Location = require("../models/location")
 const Beer = require("../models/beer")
 
+const beers = require('../dataBeers.json')
+const breweries = require('../dataBreweries.json')
+const locations = require('../dataLocations.json')
+
 Beer.deleteMany({}).then(b => Beer.create(beers.data));
 Brewery.deleteMany({}).then(b => Brewery.create(breweries.data));
 Location.deleteMany({}).then(b => Location.create(locations.data))
 
-// // Brewery.find({}).then(brewery => brewery.forEach(brewery =>
-// //     breweryData.filter( breweryData =>{
-// //         if(locations.data.brewery.id === breweries.data.id) {
-
-// //     })))
-
-
-
-// const beers = require('../dataBeers.json')
-// const breweries = require('../dataBreweries.json')
-// const locations = require('../dataLocations.json')
-
-
-// // Brewery.find({})
-// //     .then(allBreweries => {
-// //         allBreweries.forEach(eachBrewery => {
-// //             Location.findOne({"name": eachBrewery.name})
-// //                 .then(thatBrewery => {
-// //                     eachBrewery.houseref = thatBrewery.name;
-// //                     eachBrewery.save();
-// //                 })
-// //         })
-// //     })
+Brewery.find({})
+    .then(allBreweries => {
+        console.log(allBreweries)
+        // allBreweries.forEach(eachBrewery => {
+        //     Location.findOne({"name": eachBrewery.name})
+        //         .then(thatBrewery => {
+        //             eachBrewery.houseref = thatBrewery.name;
+        //             eachBrewery.save();
+        //         })
+        })
 
 //     // function linkLoc(breweries){
 //     //     return User.findOne({ username: username })

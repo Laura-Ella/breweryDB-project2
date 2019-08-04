@@ -2,45 +2,62 @@ const beers = require('../dataBeers.json')
 const breweries = require('../dataBreweries.json')
 const locations = require('../dataLocations.json')
 
-// console.log(locations.data[2].name)
-// console.log(breweries)
-// console.log(beers)
-
 const Beer = require('../models/beer')
 const Brewery = require('../models/brewery')
 const Location = require('../models/location')
 
-Beer.deleteMany({}).then(b => Beer.create(beers.data));
-Brewery.deleteMany({}).then(b => Brewery.create(breweries.data));
-Location.deleteMany({}).then(b => Location.create(locations.data))
+Brewery.deleteMany({})
+    .then(b => {
+        const breweriesData = breweries.data.map(brew => {
+            var brewObject = {
+                name: brew.name,
+                nameShortDisplay: brew.nameShortDisplay,
+                description: brew.description,
+                website: brew.website,
+                location: []
+            }
+            return brewObject
+        });
 
-// locations.data.forEach(location => {
-//     console.log(locations.data)
-// }),
-// if(locations.data.brewery.id === breweries.data.id) {
-//     console.log("hey")
-// }
-// console.log(location.brewery.name)
-// Brewery.location.push(location.brewery.name)
-// })
+        Brewery.collection.insert(breweriesData)
+            .then(check => {
+                console.log(check)
+            })
+    })
 
-// for (let i = 0; i < breweries.data.length; i++) {
-//     for (let j = 0; j < locations.data.length; j++) {
-//         if (locations.data[j].brewery.name === breweries.data[i].name) {
-//             console.log(locations.data[j].brewery.name)
-//             console.log(breweries.data[i].name)
-//         }
-//     }
-// }
+Location.deleteMany({})
+    .then(l => {
+        const locationsData = locations.data.map(loc => {
+            var locationObject = {
+                streetAddress: loc.streetAddress,
+                locality: loc.locality,
+                region: loc.region,
+                postalCode: loc.postalCode,
+                countryIsoCode: loc.countryIsoCode
+            }
+            return locationObject
+        });
 
+        Location.collection.insert(locationsData)
+            .then(here => {
+                console.log(here)
+            })
+    })
 
+Beer.deleteMany({})
+    .then(r => {
+        const beersData = beers.data.map(beer => {
+            var beerObject = {
+                name: beer.name,
+                abv: beer.abv,
+                ibu: beer.ibu,
+                description: beer.description
+            }
+            return beerObject
+        });
 
-
-// breweries.data.forEach(location => {
-//     locations.data.forEach(locationTwo => {
-//         if(locations.name === locationTwo.name) {
-//             console.log(location.name, locationTwo.name)
-
-//         }
-//     })
-// })
+        Beer.collection.insert(beersData)
+            .then(last => {
+                console.log(last)
+            })
+    })
