@@ -8,7 +8,7 @@ module.exports = {
       )
   },
   show: function (req, res) {
-    Brewery.find({ "name": req.params.name })
+    Brewery.find({ name: req.params.name })
       .then(brewery =>
         res.json(brewery)
       )
@@ -21,7 +21,7 @@ module.exports = {
   },
   edit: function (req, res) {
     Brewery.findOneAndUpdate({ _id: req.params.id }, 
-      {$set: {"name" : req.body.name} } )
+      {$set: {name : req.body.name} } )
       .then(brewery =>
         res.json(brewery)
       )},

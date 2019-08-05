@@ -8,7 +8,7 @@ module.exports = {
       )
   },
   show: function (req, res) {
-    Beer.find({ "name": req.params.name })
+    Beer.find({ name: req.params.name })
       .then(beer =>
         res.json(beer)
       )
@@ -21,7 +21,7 @@ module.exports = {
   },
   edit: function (req, res) {
     Beer.findOneAndUpdate({ _id: req.params.id }, 
-      {$set: {"name" : req.body.name} } )
+      {$set: {name : req.body.name} } )
       .then(beer =>
         res.json(beer)
       )},

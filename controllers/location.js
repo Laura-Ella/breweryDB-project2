@@ -8,7 +8,7 @@ module.exports = {
       )
   },
   show: function (req, res) {
-    Location.find({ id: req.params.id })
+    Location.find({ name: req.body.name })
       .then(location =>
         res.json(location)
       )
@@ -20,11 +20,12 @@ module.exports = {
       )
   },
   edit: function (req, res) {
-    Location.findOneAndUpdate({ _id: req.params.id }, 
-      {$set: {"name" : req.body.name} } )
+    Location.findOneAndUpdate({ _id: req.params.id },
+      { $set: { name: req.body.name } })
       .then(location =>
         res.json(location)
-      )},
+      )
+  },
   delete: function (req, res) {
     Location.findOneAndDelete({ _id: req.params.id }, req.body)
       .then(location =>

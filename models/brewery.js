@@ -8,7 +8,7 @@ const Brewery = new Schema({
     website: String,
     location: [
         {
-            type: Schema.Types.String,
+            type: mongoose.Schema.Types.String,
             ref: "Location"
         }
     ],
