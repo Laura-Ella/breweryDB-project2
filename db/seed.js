@@ -21,60 +21,60 @@ const Location = require('../models/location')
 //     })
 // })
 
-Brewery.deleteMany({})
-    .then(b => {
-        const breweriesData = breweries.data.map(brew => {
-            var brewObject = {
-                name: brew.name,
-                nameShortDisplay: brew.nameShortDisplay,
-                description: brew.description,
-                website: brew.website,
-                location: []
-            }
-            return brewObject
-        });
+// Brewery.deleteMany({})
+//     .then(b => {
+//         const breweriesData = breweries.data.map(brew => {
+//             var brewObject = {
+//                 name: brew.name,
+//                 nameShortDisplay: brew.nameShortDisplay,
+//                 description: brew.description,
+//                 website: brew.website,
+//                 location: []
+//             }
+//             return brewObject
+//         });
 
-        Brewery.collection.insert(breweriesData)
-            .then(check => {
-                console.log(check)
-            })
-    })
+//         Brewery.collection.insert(breweriesData)
+//             .then(check => {
+//                 console.log(check)
+//             })
+//     })
 
-Location.deleteMany({})
-    .then(l => {
-        const locationsData = locations.data.map(loc => {
-            var locationObject = {
-                name: loc.brewery.name,
-                streetAddress: loc.streetAddress,
-                locality: loc.locality,
-                region: loc.region,
-                postalCode: loc.postalCode,
-                countryIsoCode: loc.countryIsoCode
-            }
-            return locationObject
-        });
+// Location.deleteMany({})
+//     .then(l => {
+//         const locationsData = locations.data.map(loc => {
+//             var locationObject = {
+//                 name: loc.brewery.name,
+//                 streetAddress: loc.streetAddress,
+//                 locality: loc.locality,
+//                 region: loc.region,
+//                 postalCode: loc.postalCode,
+//                 countryIsoCode: loc.countryIsoCode
+//             }
+//             return locationObject
+//         });
 
-        Location.collection.insert(locationsData)
-            .then(here => {
-                console.log(here)
-            })
-    })
+//         Location.collection.insert(locationsData)
+//             .then(here => {
+//                 console.log(here)
+//             })
+//     })
 
-Beer.deleteMany({})
-    .then(r => {
-        const beersData = beers.data.map(beer => {
-            var beerObject = {
-                name: beer.name,
-                abv: beer.abv,
-                ibu: beer.ibu,
-                description: beer.description
-            }
-            return beerObject
-        });
+// Beer.deleteMany({})
+//     .then(r => {
+//         const beersData = beers.data.map(beer => {
+//             var beerObject = {
+//                 name: beer.name,
+//                 abv: beer.abv,
+//                 ibu: beer.ibu,
+//                 description: beer.description
+//             }
+//             return beerObject
+//         });
 
-        Beer.collection.insert(beersData)
-            .then(last => {
-                console.log(last)
-            })
-    })
+//         Beer.collection.insert(beersData)
+//             .then(last => {
+//                 console.log(last)
+//             })
+//     })
 
