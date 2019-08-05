@@ -6,20 +6,20 @@ const Beer = require('../models/beer')
 const Brewery = require('../models/brewery')
 const Location = require('../models/location')
 
-Brewery.find({}).deleteMany(() => {
-    breweries.data.forEach(brew => {
-        Brewery.create({
-            name: brew.name,
-            nameShortDisplay: brew.nameShortDisplay,
-            description: brew.description,
-            website: brew.website,
-            location: []
-        }).then(brewery => {
-            brewery.save()
-            console.log(brewery)
-        })
-    })
-})
+// Brewery.find({}).deleteMany(() => {
+//     breweries.data.forEach(brew => {
+//         Brewery.create({
+//             name: brew.name,
+//             nameShortDisplay: brew.nameShortDisplay,
+//             description: brew.description,
+//             website: brew.website,
+//             location: [Location]
+//         }).then(brewery => {
+//             brewery.save()
+//             console.log(brewery)
+//         })
+//     })
+// })
 
 Brewery.deleteMany({})
     .then(b => {
