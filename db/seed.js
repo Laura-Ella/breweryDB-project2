@@ -44,6 +44,7 @@ Location.deleteMany({})
     .then(l => {
         const locationsData = locations.data.map(loc => {
             var locationObject = {
+                name: loc.brewery.name,
                 streetAddress: loc.streetAddress,
                 locality: loc.locality,
                 region: loc.region,
