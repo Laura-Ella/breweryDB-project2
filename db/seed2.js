@@ -10,7 +10,7 @@ Brewery.find({}).then(allBreweries => {
             for (let j = 0; j < allLocations.length; j++) {
                 if (allBreweries[i].name === allLocations[j].name) {
                     allBreweries[i].location.push(allLocations[j])
-                    console.log(allBreweries)
+                    console.log(allBreweries[i].location)
                 }
             }
         }
