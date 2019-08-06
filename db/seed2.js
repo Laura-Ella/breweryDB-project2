@@ -9,8 +9,10 @@ Brewery.find({}).then(allBreweries => {
         var objId = allLocations.map(loc => {
             return loc
         });
+        console.log(objId)
         for (let i = 0; i < allBreweries.length; i++) {
             for (let j = 0; j < objId.length; j++) {
+                // console.log(allBreweries)
                 if (allBreweries[i].name === objId[j].name) {
                     allBreweries[i].location = objId[j]
                 }

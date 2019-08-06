@@ -7,7 +7,7 @@ app.use(parser.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.redirect("/breweries/");
+  res.redirect("/brewery/");
 });
 
 app.use("/beer", require("./routes/beer"));
