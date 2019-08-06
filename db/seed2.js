@@ -8,19 +8,11 @@ Brewery.find({}).then(allBreweries => {
     Location.find({}).then(allLocations => {
         console.log(allBreweries)
         console.log(allLocations)
-        // var objId = allLocations.map(loc => {
-        //     return loc
-        // });
-        // console.log(objId)
-        // var brew = allBreweries.map(brews => {
-        //     return brews
-        // })
-        // console.log(brew)
         for (let i = 0; i < allBreweries.length; i++) {
-            for (let j = 0; j < objId.length; j++) {
+            for (let j = 0; j < allLocations.length; j++) {
                 // console.log(allBreweries)
-                if (allBreweries[i].name === objId[j].name) {
-                    allBreweries[i].location = objId[j]
+                if (allBreweries[i].name === allLocations[j].name) {
+                    allBreweries[i].location.push(allLocations[j])
                 }
             }
         }
